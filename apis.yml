@@ -37,6 +37,10 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/pc-financial-domain-security.yml
+- type: LLMsTxt
+  url: llms/pc-financial-llms.txt
 - type: Website
   url: https://www.pcfinancial.ca/en/
 - type: TermsOfService

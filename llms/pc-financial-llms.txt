@@ -1,0 +1,24 @@
+# PC Financial (President's Choice Financial)
+
+> PC Financial is the digital-first, branchless financial-services brand of Canadian grocery giant Loblaw Companies Limited. Its personal banking and Mastercard credit-card products are issued by President's Choice Bank, a federally chartered Schedule I bank and CDIC member. The brand centers on the no-fee PC Money Account, PC Financial and PC World Elite Mastercard credit cards, and deep integration with the PC Optimum loyalty program. PC Financial publishes NO public first-party developer portal or API; under Canada's not-yet-operational Consumer-Driven Banking framework, consumer account access today is aggregator/screen-scraping-based via providers such as Plaid and Finicity (Mastercard). It supports Interac e-Transfer on the PC Money Account as shared payments-rail participation.
+
+## Status
+- No public API, developer portal, OpenAPI, GraphQL, or MCP server exists (verified 2026-07-23).
+- Consumer banking (chequing, savings, mortgages) was transferred to CIBC's Simplii Financial in 2017.
+- In December 2025 Equitable Bank (EQB) agreed to acquire PC Financial from Loblaw for roughly $800 million.
+- Canada's Consumer-Driven Banking (open banking) framework is legislated but not yet operational.
+
+## Company
+- [Website](https://www.pcfinancial.ca/en/): PC Financial homepage
+- [Contact / Support](https://www.pcfinancial.ca/en/contact-us/): customer support
+- [FAQs / Documentation](https://www.pcfinancial.ca/en/faqs/): help and product FAQs
+- [Legal / Terms of Service](https://www.pcoptimum.ca/presidents-choice-financial-legal): terms and legal
+- [Privacy Policy](https://www.pcoptimum.ca/presidents-choice-financial-legal): privacy policy
+- [LinkedIn](https://www.linkedin.com/company/president's-choice-financial): company profile
+
+## Data access (aggregator-based)
+- No first-party consumer-data API. Third-party account aggregation is performed by Plaid and Finicity (Mastercard) via credential-based/screen-scraping connections.
+- Interac e-Transfer is supported on the PC Money Account as shared payments-rail participation, not as a public API surface.
+
+## Artifacts in this catalog entry
+- [Domain security profile](security/pc-financial-domain-security.yml): probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture for pcfinancial.ca

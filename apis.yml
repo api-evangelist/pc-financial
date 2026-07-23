@@ -1,0 +1,54 @@
+aid: pc-financial
+url: https://raw.githubusercontent.com/api-evangelist/pc-financial/refs/heads/main/apis.yml
+name: PC Financial
+kind: company
+description: >-
+  PC Financial (President's Choice Financial) is the financial-services brand of
+  Canadian grocery giant Loblaw Companies Limited. Its personal banking and
+  Mastercard credit-card products are issued by President's Choice Bank, a
+  federally chartered Schedule I bank and CDIC member, while insurance is offered
+  through PC Financial Insurance. The digital-first, branchless brand centers on
+  the no-fee PC Money Account (a Mastercard-network everyday spending account
+  launched September 2020), a line of PC Financial and PC World Elite Mastercard
+  credit cards, and deep integration with the PC Optimum loyalty program across
+  Loblaw's grocery, pharmacy, and retail banners. Consumer banking (chequing,
+  savings, mortgages) was transferred to CIBC's Simplii Financial in 2017, so
+  PC Financial today is a rewards-linked digital banking arm rather than a
+  full-service bank. In December 2025 Equitable Bank (EQB) agreed to acquire
+  PC Financial from Loblaw for roughly $800 million. On open finance, PC Financial
+  runs NO public first-party developer portal or API; Canada's Consumer-Driven
+  Banking framework is legislated but not yet operational, so consumer account
+  access today is aggregator/screen-scraping-based via providers such as Plaid
+  and Finicity (Mastercard). The bank supports Interac e-Transfer on the PC Money
+  Account as shared payments-rail participation.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Canada
+- Schedule I Bank
+- Digital Banking
+- Credit Cards
+- Loyalty
+- Interac
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.pcfinancial.ca/en/
+- type: TermsOfService
+  url: https://www.pcoptimum.ca/presidents-choice-financial-legal
+- type: PrivacyPolicy
+  url: https://www.pcoptimum.ca/presidents-choice-financial-legal
+- type: Support
+  url: https://www.pcfinancial.ca/en/contact-us/
+- type: Documentation
+  url: https://www.pcfinancial.ca/en/faqs/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/president's-choice-financial
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

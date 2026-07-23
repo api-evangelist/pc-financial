@@ -1,0 +1,88 @@
+aid: pc-financial
+name: PC Financial
+review:
+  question: Does PC Financial (President's Choice Bank) expose a public first-party developer API or downloadable OpenAPI specifications?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    PC Financial (President's Choice Financial) exposes NO public first-party
+    developer API and publishes NO downloadable OpenAPI/Swagger specifications.
+    President's Choice Bank is a federally chartered Schedule I bank and CDIC
+    member, a digital banking arm of Loblaw Companies whose products (PC Money
+    Account, PC Financial Mastercard credit cards, PC Optimum-linked rewards)
+    are consumer retail products with no developer program. Domain probes on
+    2026-07-23 found no developer portal or API host: developer.pcfinancial.ca
+    and api.pcfinancial.ca do not resolve (connection failed, HTTP 000), while
+    the consumer marketing site www.pcfinancial.ca returns HTTP 200. There is no
+    OAuth2/OIDC developer authorization surface, no API key issuance, and no
+    mTLS/FDX data-access endpoint to document. Consumer account data access is
+    available only through third-party aggregators (Plaid, Finicity/Mastercard)
+    using credential-based/screen-scraping connections, not a bank-native API.
+    Canada's federal Consumer-Driven Banking framework (Budget 2024 / FES 2024,
+    overseen by the FCAC) is legislated but not yet operational, so there is no
+    live mandate-driven data API and no published PC Financial CDB/FDX position.
+    The PC Money Account participates in Interac e-Transfer and rides the
+    Mastercard network, but neither is surfaced as a documented public API. As
+    of the review date this is an identity-only, aggregator-only record.
+  charter:
+    entity: President's Choice Bank
+    type: Schedule I bank (federally chartered, CDIC member)
+    parent: Loblaw Companies Limited
+    pendingAcquisition: Equitable Bank (EQB) agreed Dec 2025 to acquire PC Financial (~$800M); not yet closed as of review date.
+    note: Canadian President's Choice entity; distinct from any US bank.
+  developerPortal:
+    exists: false
+    probed:
+    - url: https://developer.pcfinancial.ca
+      status: '000'
+      note: Does not resolve / connection failed. No developer portal.
+    - url: https://api.pcfinancial.ca
+      status: '000'
+      note: Does not resolve / connection failed. No API host.
+    - url: https://www.pcfinancial.ca/en/
+      status: '200'
+      note: Consumer marketing site only; no developer program, API, or open-banking docs.
+  specProvenance:
+    openapiHarvested: false
+    note: No public OpenAPI/Swagger/Postman artifacts are published by PC Financial.
+  authModel: None public. No developer OAuth2/OIDC, API key, or mTLS surface is documented.
+  openFinancePosture:
+    fdxParticipant: false
+    section1033Posture: false
+    consumerDrivenBanking: Framework legislated (Budget 2024 / FES 2024, FCAC overseer) but not yet operational; no PC Financial CDB/FDX endpoint or published position found.
+    aggregatorAccess:
+    - Plaid
+    - Finicity (Mastercard)
+    paymentsRails:
+    - Interac e-Transfer (supported on PC Money Account; no public API)
+    - Mastercard network (card rails; no public API)
+  transports:
+  - protocol: REST
+    scheme: https
+    documented: false
+    note: No public REST API documented for developers.
+  - protocol: FDX
+    scheme: https
+    documented: false
+    note: No FDX financial-data-exchange API documented; Canada's CDB framework is not yet operational.
+sources:
+- url: https://www.pcfinancial.ca/en/
+  type: Website
+  note: Consumer site; no developer/API references. HTTP 200.
+- url: https://en.wikipedia.org/wiki/President's_Choice_Financial
+  type: Reference
+  note: Confirms President's Choice Bank as issuer, Loblaw ownership, Simplii transition, EQB acquisition.
+- url: https://www.pcoptimum.ca/presidents-choice-financial-legal
+  type: TermsOfService
+  note: PC Financial legal / terms landing page. HTTP 200.
+- url: https://fintable.io/coverage/banks/Canada/30479_presidents-choice-financial
+  type: Reference
+  note: Documents third-party aggregator (Plaid / Finicity) coverage of PC Financial accounts.
+actions:
+  openapiHarvested: false
+  reason: |
+    No public API surface or downloadable specification exists to harvest. This
+    is an honest identity-only, aggregator-only bootstrap record for the
+    Canadian President's Choice Bank entity.
